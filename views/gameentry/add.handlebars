@@ -1,0 +1,28 @@
+<h1>Add Games</h1>
+{{#each errors}}<!--This starts a loop -->
+<!--Renders-->
+<div class="alert alert-danger">{{text}}</div>
+{{else}}
+<!--Does Not Render-->
+
+{{/each}}<!-- Ends the loop -->
+<div class="jumbotron text-center">
+    <h1>Add Games</h1>
+    <div class="card card-body">
+        <form action="/game/gameentry" method="POST">
+            <div class="form-group">
+                <label for="title">title</label>
+                <input type="text" name="title" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="price">price</label>
+                <input type="text" name="price" class="form-control" require>
+            </div>
+            <div class="form-group">
+                <label for="description">description</label>
+                <textarea name="description" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">submit</button>
+        </form>
+    </div>
+</div>
